@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="shortcut icon" href="/img/logo.ico" />
+    <title>
+        <%=title%>
+    </title>
+	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <%include partials/head.html%>
+    <link rel="stylesheet" href="/css/magic/magic.css">
+    <link rel="stylesheet" href="/css/w3.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+	.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+	z-index:500;
+}
+	.carousel-caption{
+		float:left;
+		background-color:rgba(0,0,0,0.2);
+		border-radius:1em;
+	}
+	.carousel-caption p{
+	font-size:2em;
+}
+	.scroll-to-top {
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    background: #404040;
+    border-radius: 7px 7px 0 0;
+    bottom: 0;
+    color: #FFF;
+    display: block;
+    height: 9px;
+    padding: 13px 10px 35px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 49px;
+    z-index: 1040;
+}
+.visible {
+    visibility: visible!important;
+}
+    @font-face {
+        font-family: 'PT Sans';
+        src: url('fonts/pt_sans.ttf');
+    }
+    h1,h2,h3,h4,h5{
+	font-family: 'Lato', sans-serif;
+	}
+    body {
+        font-family:futura;
+        background: white;
+    }
+
+    .imageWelcome {
+        height: 300px;
+        margin: 8px;
+    }
+
+    .imgFeed {
+        height: 75px;
+        margin: auto;
+    }
+    .card-img-top{
+	padding:0.5em 0.5em; width:33%; height:33%;
+	}
+    .card{
+	border-radius:15px;
+	}
+    .imgInfo {
+        background-size: cover;
+        height: 250px;
+        width: 100%;
+    }
+
+    hr {
+        border-color: lightgray;
+        background-color: lightgray;
+        color: lightgray;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+.jumbotron{
+	background:white;
+	}
+</style>
+
+
+<body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+	<!--Seccion del menu de navegacion-->
+    <% include partials/navigation.html %>
+	<!-- Seccion del slider-->
+	<% include partials/slider.html%>
+	<!--Seccion de los servicios-->	
+	<% include partials/servicios.html%>
+       
+	<!--Seccion de la mision de la empresa-->
+	<div class="jumbotron">
+	<i class="text-center"><h1 data-aos="fade-left">Sobre nosotros</h1></i>
+	<hr  style="height:3px; margin:auto; width:100px; background:blue; margin-bottom:2em;">
+        <div class="container-fluid">
+	<div class="row">
+	<div class="col-lg-6 col-sm 6 "data-aos="fade-top">
+        <h5>VSI es una empresa comprometida a servir y apoyar a nuestros clientes con servicios y tecnologias que dan soporte 
+        a la mejora continua de los diferentes sistemas productivos, ya sea solucionando fallas y/o modificando estaciones de trabajo en su totalidad, con el objetivo
+        de contribuir en la mejora continua, la eficiencia y la capacidad productiva de nuestros clientes, otorgando en todo momento un servicio de asesoria y soporte para cada proyecto.</h5>
+        </div>
+	<div class="col-lg-6 col-sm-6" data-aos="fade-right">
+		<img class="img-fluid mx-auto d-block" style="width:10em; height:10em;" src="/img/logo_vsi.png">
+	</div>
+        </div>
+	</div>
+</div>
+<!--
+        <hr style="visibility: hidden">
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="w3-center" style="margin-top: 24px">Equipo de diseñadores y maquinas CNC
+            para desarrollar y apoyarte con, Maquinado de piezas, diseño y manufactura de dispositivos<br>
+            que contribuyan a la mejora continua de nuestros clientes  </h1>
+</div>
+</div>
+<!--
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/maquinado_1.png" style="    transform: matrix3d(1, 0.000174533, 0, 0, -0.000174533, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 0% 0% 0px;">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/maquinado_2.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/maquinado_3.png">
+            </div>
+        </div>
+
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/maquinado_4.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/maquinado_5.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/maquinado_6.png">
+            </div>
+        </div>
+    </div>
+-->
+<!--
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="w3-center" style="margin-top: 24px">Realizamos proyectos en diseño electrónico y Electromecánico <br>
+            conjugando la pneumática y la hidráulica para satisfacer las necesidades en los diferentes proyectos hechos a medida</h1>
+
+        <hr>
+</div>
+</div>
+<!--
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_1.jpg">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_2.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_3.png">
+            </div>
+        </div>
+
+     
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_5.png">
+            </div>
+          
+      
+
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_7.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_8.jpg">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_8.png">
+            </div>
+        </div>
+
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_10.png">
+            </div>
+           
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/electronica_12.jpg">
+            </div>
+        </div>
+    </div>
+--><!--
+    <hr style="visibility: hidden">
+
+    <div class="row">
+	<div class="col-lg-12">
+        <h1 class="w3-center" style="margin-top: 24px">Contamos con la maquinaria y el equipo necesario  <br> 
+         para diseñar y fabricar letreros en señaletica comercial e Industrial</h1>
+</div>
+	</div>
+      <!--
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" style="height: 700px" src="/img/senaletica_1.png">
+            </div>
+        </div>
+    </div>
+
+    <hr style="visibility: hidden">
+-->
+<!--
+	<div class="row">
+    <div class="col-lg-12">
+        <h1 class="w3-center" style="margin-top: 24px">Contamos con soldadura especializada para realizar culaquier proyecto <br>
+        relacionado al diseño y manufactura en acero estructural </h1>
+</div>
+</div>
+      <!--  <hr>
+
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" style="height: 350px" src="/img/soldadura_1.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" style="height: 350px" src="/img/soldadura_2.png">
+            </div>
+        </div>
+    </div>
+
+    <hr style="visibility: hidden">
+-->
+<!--
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="w3-center" style="margin-top: 24px">Desarrollo de sistemas basados  en la Manufactura 4.0,<br>
+            tecnologias IoT, robotica, diseño y fabricación en PCB, automatización, desarrollo de Software y Hardware comercial e industrial , </h1>
+</div>
+</div>
+<!--
+        <hr>
+
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/industria_1.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/industria_2.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/industria_3.png">
+            </div>
+        </div>
+
+        <div class="w3-cell-row" style="margin-top: 24px">
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/industria_4.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/industria_5.png">
+            </div>
+            <div class="w3-container w3-cell w3-center">
+                <img class="imgInfo" src="/img/industria_6.png">
+            </div>
+        </div>
+    </div>
+
+   -->
+
+   
+
+ 
+
+    <!--SECTION ONE-->
+    <div class="container-fluid seccion" id="about" style="margin-top: 40px">
+        <div class="row bg-dark text-white p-5 text-center">
+
+            <!--<div class="col-sm-6">
+                <i class="fab fa-youtube fa-5x"></i>
+
+            </div>-->
+
+            <div class="col-sm-12">
+                <h3>ESTAMOS A LA ORDEN!</h3>
+                <p>serviciovupe@gmail.com<br>
+                VENTAS Alejandro Jiménez +52614-121-60-32</p>
+            </div>
+        </div>
+    </div>
+    <% include partials/footer.html %>
+<br>
+<br>
+<a class="scroll-to-top hidden-mobile visible" href="#"><i class="fas fa-chevron-up"></i></a>
+</body>
+<script>
+  document.getElementById('serv').addEventListener("mouseover",function(){ 
+	document.getElementById('serv').className += ' magictime puffIn';
+	setInterval(function(){document.getElementById('serv').classList.remove('magictime','puffIn');},2000);
+	
+});
+	
+	
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="/js/main.js" charset="utf-8"></script>
+
+</html>
